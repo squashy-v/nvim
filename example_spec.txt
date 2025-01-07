@@ -1,0 +1,50 @@
+return {
+	"plugin/author", -- The GitHub repo or plugin path (required)
+
+		-- Optional: Basic metadata
+		name = "plugin_name",        -- Custom name for the plugin (defaults to repo name)
+		enabled = true,              -- Whether to load this plugin (default: true)
+		lazy = true,                 -- Whether to lazy-load the plugin (default: false)
+		priority = 1000,             -- Load order priority (higher = earlier)
+
+		-- Optional: Filetype or event-based lazy-loading
+		event = "BufReadPre",        -- Load on specific events (e.g., Vim events like BufRead, VeryLazy, etc.)
+		cmd = { "Command1", "Command2" }, -- Load when specific commands are called
+		keys = {                     -- Key mappings that trigger loading the plugin
+			{ "<leader>xy", function() print("Hello") end, desc = "Say Hello" },
+				{ "<leader>yz", ":Command<CR>", desc = "Run Command" },
+		},
+		     ft = { "lua", "python" },    -- Load for specific file types
+			     cond = function()            -- Load only if this condition is true
+			     return vim.fn.has("nvim-0.9") == 1
+			     end,
+
+		     -- Optional: Plugin dependencies
+			     dependencies = { 
+				     "dependency/author",       -- Specify dependencies (will be loaded automatically)
+				     { "optional/plugin", lazy = true },
+			     },
+
+		     -- Optional: Plugin-specific configuration
+			     config = function()
+			     require("plugin_name").setup({
+					     option1 = true,
+					     option2 = "value",
+					     })
+	end,
+
+		-- Optional: Build steps (for plugins requiring compilation or setup)
+			build = "make",              -- Command to run after installation/update
+			run = "SomeSetupFunction()", -- Function or command to run after installation/update
+
+			-- Optional: Plugin-specific extras
+			branch = "main",             -- Use a specific branch
+			tag = "v1.0.0",              -- Use a specific version/tag
+			commit = "abc1234",          -- Use a specific commit hash
+			dir = "~/plugins/my_plugin", -- Local plugin directory
+			opts = {                     -- Default options passed to config or setup
+				setting1 = true,
+				setting2 = "value",
+			},
+}
+
