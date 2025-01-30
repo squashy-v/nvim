@@ -6,7 +6,7 @@ vim.keymap.set('n', '<leader>bda', function() vim.cmd('bufdo bd') end, { desc = 
 
 
 vim.api.nvim_create_user_command("Cempty", function()
-	vim.fn.setqflist({})
+    vim.fn.setqflist({})
 end, { desc = "Clear Quick Fix List" })
 vim.keymap.set('n', '<leader>qe', "<Cmd>Cempty<CR>", { desc = "Clear Quick Fix List" })
 

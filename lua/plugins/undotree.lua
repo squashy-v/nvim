@@ -1,5 +1,4 @@
 return {
-	"mbbill/undotree",
-
-	Event = "VeryLazy",
+    "mbbill/undotree",
+    Event = "VeryLazy",
 }
