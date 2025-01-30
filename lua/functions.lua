@@ -6,3 +6,7 @@ function CloseFloatingWindows()
         end
     end
 end
+
+function make_grid (x, y)
+    print(x, y)
+end
