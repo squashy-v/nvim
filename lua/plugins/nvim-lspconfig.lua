@@ -17,19 +17,19 @@ return {
         -- fix this mess
         vim.api.nvim_create_autocmd('LspAttach', {
             desc = 'LSP actions',
-            callback = function(event)
-                local opts = {buffer = event.buf}
-
-                vim.keymap.set('n', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-                vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-                vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-                vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-                vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
-                vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
-                vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
-                vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-                vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-                vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+            callback = function()
+                vim.keymap.set('n', '<C-k>', vim.lsp.buf.hover, { desc = 'lsp hover' })
+                vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, { desc = 'lsp goto def' })
+                vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { desc = 'lsp goto ref' })
+                vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'lsp goto declaration' })
+                vim.keymap.set('n', 'gI', require('telescope.builtin').lsp_implementations,
+                    { desc = 'lsp goto implement' })
+                vim.keymap.set('n', 'go', require('telescope.builtin').lsp_type_definitions, { desc = 'lsp type def' })
+                vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = 'lsp references' })
+                vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help)
+                vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'lsp rename' })
+                vim.keymap.set({ 'n', 'x' }, "<leader>f", vim.lsp.buf.format, { desc = "lsp format current buffer" })
+                vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'lsp code action' })
             end,
         })
     end,
