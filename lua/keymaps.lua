@@ -4,6 +4,10 @@ vim.keymap.set('n', '<leader>bp', function() vim.cmd('bp') end, { desc = "previo
 vim.keymap.set('n', '<leader>bds', function() vim.cmd('bd!') end, { desc = "delete buffer" })
 vim.keymap.set('n', '<leader>bda', function() vim.cmd('bufdo bd') end, { desc = "delete all buffers" })
 
+vim.keymap.set('n', '<M-h>', '<C-w>h', { desc = "Move pane to the left" })
+vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = "Move pane down" })
+vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = "Move pane up" })
+vim.keymap.set('n', '<M-l>', '<C-w>l', { desc = "Move pane to the right" })
 
 vim.api.nvim_create_user_command("Cempty", function()
     vim.fn.setqflist({})
@@ -35,7 +39,7 @@ vim.keymap.set('x', '<leader>p', "\"_dP", { desc = "paste over text without repl
 vim.keymap.set({ 'n', 'v' }, '<leader>y', "\"+y", { desc = "yank into system clipboard" })
 vim.keymap.set({ 'n', 'v' }, '<leader>Y', "\"+Y", { desc = "yank line into system clipboard" })
 
-vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d", { desc = "delete to void reg" })
+vim.keymap.set('v', '<leader>d', "\"_d", { desc = "delete to void reg" })
 
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "lsp format current buffer" })
