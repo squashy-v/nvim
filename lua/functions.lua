@@ -10,3 +10,5 @@ end
 function make_grid (x, y)
     print(x, y)
 end
+
+vim.api.nvim_create_user_command('LspInfo', ':horiz che lspconfig', { desc = "View current lsp health" })
