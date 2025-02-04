@@ -14,8 +14,17 @@ return {
                         ["<C-q>"] = "send_selected_to_qflist",
                     }
                 }
-            }
+            },
+            extensions = {
+                fzf = {
+                    fuzzy = true,  -- Enable fuzzy matching
+                    override_generic_sorter = true,
+                    override_file_sorter = true,
+                    case_mode = "smart_case",
+                },
+            },
         })
+        require('telescope').load_extension('fzf')
     end,
     branch = '0.1.x',
 }
