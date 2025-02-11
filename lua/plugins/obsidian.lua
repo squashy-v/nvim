@@ -21,19 +21,19 @@ return {
         },
     version = "*",  -- recommended, use latest release instead of latest commit
     opts = {
-        workspaces = {
-            {
-                name = "mind-palace",
-                path = "~/bayt/mount/mind-palace",
-            },
-        },
-        templates = {
-            subdir = "~/bayt/mount/mind-palace/templates",
-        },
-        daily_notes = {
-            folder = "~/bayt/mount/mind-palace/daily_notes/",
-            date_format = "MMM-DD-YYYY",
-        },
+        -- workspaces = {
+        --     {
+        --         name = "mind-palace",
+        --         path = "~/bayt/mount/mind-palace",
+        --     },
+        -- },
+        -- templates = {
+        --     subdir = "~/bayt/mount/mind-palace/templates",
+        -- },
+        -- daily_notes = {
+        --     folder = "~/bayt/mount/mind-palace/daily_notes/",
+        --     date_format = "MMM-DD-YYYY",
+        -- },
         completion = {
             nvim_cmp = true,
             min_chars = 2,
