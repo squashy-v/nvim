@@ -27,5 +27,24 @@ return {
                 path = "~/bayt/mount/mind-palace",
             },
         },
+        templates = {
+            subdir = "~/bayt/mount/mind-palace/templates",
+        },
+        daily_notes = {
+            folder = "~/bayt/mount/mind-palace/daily_notes/",
+            date_format = "MMM-DD-YYYY",
+        },
+        completion = {
+            nvim_cmp = true,
+            min_chars = 2,
+        },
+        mappings = {
+            ["gf"] = {
+                action = function()
+                    return require("obsidian").util.gf_passthrough()
+                end,
+                opts = { noremap = false, expr = true, buffer = true },
+            },
+  },
     },
 }
