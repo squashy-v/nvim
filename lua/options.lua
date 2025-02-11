@@ -29,7 +29,6 @@ vim.opt.smartcase = true
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 vim.opt.mouse = 'a'
-vim.opt.cursorline = true
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
