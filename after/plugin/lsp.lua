@@ -82,8 +82,8 @@ lspconfig.omnisharp.setup {
 lspconfig.powershell_es.setup{
   cmd = {'pwsh', '-NoLogo', '-NoProfile', '-Command', "/opt/powershell-editor-services/PowerShellEditorServices/Start-EditorServices.ps1 ..."}
 }
-
-local servers = { 'clangd', 'gleam', 'hls', 'gopls', 'jdtls', 'kotlin_language_server', 'ts_ls', 'html', 'cssls', 'htmx', 'jsonls', 'markdown_oxide', 'nimls', 'perlnavigator', 'intelephense', 'pyright', 'bashls', 'solargraph', 'rust_analyzer', 'zls', 'grammarly', 'teal_ls' }
+-- temp removed from servers 'grammarly', 
+local servers = { 'clangd', 'gleam', 'hls', 'gopls', 'jdtls', 'kotlin_language_server', 'ts_ls', 'html', 'cssls', 'htmx', 'jsonls', 'markdown_oxide', 'nimls', 'perlnavigator', 'intelephense', 'pyright', 'bashls', 'solargraph', 'rust_analyzer', 'zls', 'teal_ls' }
 
 for _, server in ipairs(servers) do
     lspconfig[server].setup({
