@@ -28,10 +28,10 @@ return {
             },
         },
         templates = {
-            subdir = "~/bayt/mount/mind-palace/templates",
+            subdir = "templates/",
         },
         daily_notes = {
-            folder = "~/bayt/mount/mind-palace/daily_notes/",
+            folder = "daily_notes/",
             date_format = "MMM-DD-YYYY",
         },
         completion = {
