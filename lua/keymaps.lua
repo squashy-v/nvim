@@ -40,7 +40,7 @@ vim.keymap.set('x', '<leader>p', "\"_dP", { desc = "paste over text without repl
 vim.keymap.set({ 'n', 'v' }, '<leader>y', "\"+y", { desc = "yank into system clipboard" })
 vim.keymap.set({ 'n', 'v' }, '<leader>Y', "\"+Y", { desc = "yank line into system clipboard" })
 
-vim.keymap.set('v', '<leader>d', "\"_d", { desc = "delete to void reg" })
+vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d", { desc = "delete to void reg" })
 
 vim.keymap.set("n", "<leader>qk", "<cmd>cnext<CR>zz", { desc = "quickfix next" })
 vim.keymap.set("n", "<leader>qj", "<cmd>cprev<CR>zz", { desc = "quickfix prev" })
