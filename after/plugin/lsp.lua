@@ -1,7 +1,6 @@
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- needs to be fixed on windows
 -- lspconfig.lua_ls.setup {
 --     capabilities = capabilities,
 --     on_init = function(client)
@@ -36,7 +35,28 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 --         Lua = {}
 --     }
 -- }
-
+--
 -- lspconfig.powershell_es.setup{
---   cmd = {'pwsh', '-NoLogo', '-NoProfile', '-Command', "/opt/powershell-editor-services/PowerShellEditorServices/Start-EditorServices.ps1 ..."}
+--     cmd = {'pwsh', '-NoLogo', '-NoProfile', '-Command', "/opt/powershell-editor-services/PowerShellEditorServices/Start-EditorServices.ps1 ..."}
 -- }
+--
+-- lspconfig.omnisharp.setup({
+--     cmd = {
+--         "/usr/bin/omnisharp", -- full path to binary
+--         "-lsp",
+--         "--hostPID",
+--         tostring(vim.fn.getpid()),
+--     },
+--     enable_import_completion = true,
+--     organize_imports_on_format = true,
+--     capabilities = capabilities,
+-- })
+--
+-- local servers = { 'clangd', 'gleam', 'gopls', 'jdtls', 'kotlin_language_server', 'ts_ls', 'html', 'cssls', 'jsonls', 'markdown_oxide', 'nimls', 'perlnavigator', 'intelephense', 'pyright', 'bashls', 'solargraph', 'rust_analyzer', 'zls', 'teal_ls' }
+-- -- manual updating hls teal_ls roslyn
+--
+-- for _, server in ipairs(servers) do
+--     lspconfig[server].setup({
+--         capabilities = capabilities,
+--     })
+-- end
