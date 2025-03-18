@@ -52,7 +52,7 @@ lspconfig.omnisharp.setup({
     capabilities = capabilities,
 })
 
-local servers = { 'clangd', 'gleam', 'gopls', 'jdtls', 'kotlin_language_server', 'ts_ls', 'html', 'cssls', 'jsonls', 'markdown_oxide', 'nimls', 'perlnavigator', 'intelephense', 'pyright', 'bashls', 'solargraph', 'rust_analyzer', 'zls', 'teal_ls' }
+local servers = { 'clangd', 'gleam', 'gopls', 'jdtls', 'kotlin_language_server', 'ts_ls', 'html', 'cssls', 'jsonls', 'markdown_oxide', 'nimls', 'perlnavigator', 'phpactor', 'pyright', 'bashls', 'solargraph', 'rust_analyzer', 'zls', 'teal_ls' }
 -- manual updating hls teal_ls roslyn
 
 for _, server in ipairs(servers) do
