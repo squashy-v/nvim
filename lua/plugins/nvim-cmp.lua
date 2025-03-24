@@ -21,7 +21,6 @@ return {
         'David-Kunz/cmp-npm',
         'vrslev/cmp-pypi',
         'Snikimonkd/cmp-go-pkgs',
-        'epwalsh/obsidian.nvim',
         'jc-doyle/cmp-pandoc-references',
         'PhilippFeO/cmp-csv',
         'hrsh7th/cmp-nvim-lua',
