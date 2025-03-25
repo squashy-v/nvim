@@ -36,10 +36,6 @@ lspconfig.lua_ls.setup {
     }
 }
 
-lspconfig.powershell_es.setup{
-    cmd = {'pwsh', '-NoLogo', '-NoProfile', '-Command', "/opt/powershell-editor-services/PowerShellEditorServices/Start-EditorServices.ps1 ..."}
-}
-
 lspconfig.omnisharp.setup({
     cmd = {
         "/usr/bin/omnisharp", -- full path to binary
