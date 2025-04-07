@@ -39,7 +39,7 @@ vim.keymap.set('x', '<leader>p', "\"_dP", { desc = "paste over text without repl
 
 vim.keymap.set({ 'n', 'v' }, '<leader>y', "\"+y", { desc = "yank into system clipboard" })
 vim.keymap.set({ 'n', 'v' }, '<leader>Y', "\"+Y", { desc = "yank line into system clipboard" })
-vim.keymap.set('n', '<leader>by', "gg0vG$\"+y", { desc = "yank buffer into system clipboard" })
+vim.keymap.set('n', '<leader>by', "ggVG\"+y", { desc = "yank buffer into system clipboard" })
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d", { desc = "delete to void reg" })
 
