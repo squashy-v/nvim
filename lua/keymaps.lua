@@ -13,7 +13,7 @@ vim.keymap.set('n', '<M-l>', '<C-w><C-l>', { desc = "Move pane to the right" })
 vim.api.nvim_create_user_command("Cempty", function()
     vim.fn.setqflist({})
 end, { desc = "Clear Quick Fix List" })
-vim.keymap.set('n', '<leader>qe', "<Cmd>Cempty<CR>", { desc = "Clear Quick Fix List" })
+vim.keymap.set('n', '<leader>qe', "<Cmd>Cempty<CR><Cmd>Cclose<CR>", { desc = "Clear Quick Fix List" })
 
 vim.api.nvim_create_user_command("Copen", "copen", { desc = "Open Quick Fix List" })
 vim.keymap.set('n', '<leader>qo', "<Cmd>Copen<CR>", { desc = "Open Quick Fix List" })
